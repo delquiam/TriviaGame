@@ -21,20 +21,116 @@
     <div class="container">
         <div class="jumbotron text-center">
             <h1>Wonder Woman Trivia Game</h1>
-            <p>How well do you know Wonder Woman? You have 2 minutes to take this trivia quiz. Please only mark one
-                answer.</p>
+            <p>How well do you know Wonder Woman? You have 45 seconds to take this trivia quiz. Only one answer can be
+                marked.</p>
+
+                <button id ="submit">Start!</button>
+
+                <div id="timer-content"></div>
+                <h3>Time Left</h3>
+                <h4 id="timer" class="timerStyle"></h4>
+        </div>
+      
+      
+        <div class="gameContainer">
+            <form action="/action_page.php">
+
+                <p>
+                    1)Wonder Woman made her first appearance in what comic book?
+                </p>
+
+                <input type="radio" name="question1" value="a"> Wonder Woman #1<br>
+                <input type="radio" name="question1" value="b"> Sensation Comics #1<br>
+                <input type="radio" name="question1" value="c"> Action Comics #27<br>
+                <input type="radio" name="question1" value="d"> All Star Comics #8<br>
+                <br>
+                <p>
+                   2)Which of Wonder Woman's accessories was forged from the magic girdle of Aphrodite?
+                </p>
+                <input type="radio" name="question1" value="a"> Lasso<br>
+                <input type="radio" name="question1" value="b"> Bracelets<br>
+                <input type="radio" name="question1" value="c"> Tiara<br>
+                <input type="radio" name="question1" value="d"> Earrings<br>
+                <br>
+                <p>
+                   3)Who was the first costumed villain Wonder Woman ever faced?
+                </p>              
+                <input type="radio" name="question1" value="a"> Cheetah<br>
+                <input type="radio" name="question1" value="b"> Dr. Poison<br>
+                <input type="radio" name="question1" value="c"> Dr. Psycho<br>
+                <input type="radio" name="question1" value="d"> Giganta<br>
+                <br>
+                <p>
+                   4)What was the first superhero team Wonder Woman joined?
+                </p>   
+                <input type="radio" name="question1" value="a">All Star Squadron<br>
+                <input type="radio" name="question1" value="b">Justice Society of America<br>
+                <input type="radio" name="question1" value="c">Justice League of America<br>
+                <input type="radio" name="question1" value="d">Doom Patrol <br>
+                <br>
+                <p>
+                  5)Who created Wonder Woman?
+                </p>   
+          
+                <input type="radio" name="question1" value="a">William Moulton Marston<br>
+                <input type="radio" name="question1" value="b">Bob Kane<br>
+                <input type="radio" name="question1" value="c">Jack Kirby<br>
+                <input type="radio" name="question1" value="d">Dorothy Woolfolk<br>
+                <br>
+                <p>
+                  6)What American pilot did Wonder Woman fall in love with when he crash-landed on
+                  Paradise Island?
+                </p>   
+                <input type="radio" name="question1" value="a">Terry Wagner<br>
+                <input type="radio" name="question1" value="b">Terry O'Neill<br>
+                <input type="radio" name="question1" value="c">Trevor Barnes <br>
+                <input type="radio" name="question1" value="d">Steve Trevor<br>
+                <br>
+                <p>
+                   7)>Who played Wonder Woman in the 1970s TV show?
+                </p>   
+                <input type="radio" name="question1" value="a">Lindsay Wagner<br>
+                <input type="radio" name="question1" value="b">Lynda Carter<br>
+                <input type="radio" name="question1" value="c">Farrah Fawcett<br>
+                <input type="radio" name="question1" value="d">Kate Jackson<br>
+                <br>
+                <p>
+                   8)The first issue of what women's magazine featured Wonder Woman on the cover?<
+                </p>   
+                <input type="radio" name="question1" value="a">Vogue<br>
+                <input type="radio" name="question1" value="b">Ms. Magazine<br>
+                <input type="radio" name="question1" value="c">Redbook<br>
+                <input type="radio" name="question1" value="d">Working Mother<br>
+                <br>
+                <p>
+                   9)During the 1960s, Wonder Woman became the pupil of what Chinese martial arts master?
+                </p>   
+                <input type="radio" name="question1" value="a">Sin Tzu<br>
+                <input type="radio" name="question1" value="b">Gao Xingjian<br>
+                <input type="radio" name="question1" value="c">I Ching<br>
+                <input type="radio" name="question1" value="d">Jet Li<br>
+                <br>
+                <p>
+                   10)Which of Wonder Woman's accessories allows her to breathe in outer space?
+                </p>             
+                <input type="radio" name="question1" value="a">Earrings<br>
+                <input type="radio" name="question1" value="b">Lasso<br>
+                <input type="radio" name="question1" value="b">Tiara<br>
+                <input type="radio" name="question1" value="d">Bracelets<br>
+
+            </form>
+            <br>
+
+            <button class="submit" type="submit">Submit</button>
+
+
+            <input class="btn btn-primary" type="submit" value="Submit">    
+
+
         </div>
     </div>
-    
-    <div class="panel-body">
-    </div>
-    
-    <div id="game"></div>
-    
-    <input class="btn btn-primary" type="submit" value="Submit">
 
-    <div id="results"></div>
-    <p>Your score:</p>
+
 
 
     <script type="text/javascript" src="./assets/javascript/app.js"></script>
