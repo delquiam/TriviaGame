@@ -1,10 +1,11 @@
 $(document).ready(function () {
 
-    var triviaQuestions;
-    var answers=0;
-    var numCorrect=0;
-    var numIncorrect=0;
-    var timer=45;
+    var triviaQuestions = 10;
+    var correctAnswers = ['d', 'a', 'b', 'b', 'a', 'd', 'b', 'b', 'c', 'a'];
+    var playerAnswer = [];
+    var correct = 0;
+    var incorrect = 0;
+    var countdown = 60;
 
 
     /**
@@ -19,10 +20,30 @@ $(document).ready(function () {
         *reset game and timer
      */
 
-    
-    $(".submit").click(function(){
-        var formValue= $('input[name=question1]:checked').val();
-       console.log(formValue);
+
+
+    $(".submit").click(function () {
+        $('form input:checked').each(function () {
+            playerAnswer.push($(this).val());
+        })
+        console.log(playerAnswer);
+        for (var i = 0; i < correctAnswers.length; i++) {
+            if (correctAnswers[i] === playerAnswer[i]) {
+                correct++;
+                $('#answersRight').text(correct);
+            }
+            else {
+                incorrect++;
+                $('#answersWrong').text(incorrect);
+            }
+        }
     })
-})
-    
+
+
+
+
+
+});
+
+
+
