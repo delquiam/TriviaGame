@@ -5,7 +5,8 @@ $(document).ready(function () {
     var playerAnswer = [];
     var correct = 0;
     var incorrect = 0;
-    var countdown = 60;
+    var countdown = 45;
+    var intervalId;
 
 
     /**
@@ -20,13 +21,29 @@ $(document).ready(function () {
         *reset game and timer
      */
 
-
-
+    function stop() {
+        clearInterval(intervalId);
+    }
+    function run() {
+        clearInterval(intervalId);//putting this here will make it run only one time
+        intervalId = setInterval(timer, 1000);
+      }
+    function timer() {
+        countdown--;
+        $('#timer').text(countdown);
+        if (countdown === 0) {
+            stop();
+        }       
+    }
+    $('#startBtn').on('click', function() {
+        intervalId = setInterval(timer, 1000);   
+            $('#timer').text(countdown);          
+    });
+    
     $(".submit").click(function () {
         $('form input:checked').each(function () {
             playerAnswer.push($(this).val());
         })
-        console.log(playerAnswer);
         for (var i = 0; i < correctAnswers.length; i++) {
             if (correctAnswers[i] === playerAnswer[i]) {
                 correct++;
@@ -38,11 +55,6 @@ $(document).ready(function () {
             }
         }
     })
-
-
-
-
-
 });
 
 
