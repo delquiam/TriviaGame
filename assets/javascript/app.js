@@ -27,18 +27,20 @@ $(document).ready(function () {
     function run() {
         clearInterval(intervalId);//putting this here will make it run only one time
         intervalId = setInterval(timer, 1000);
-      }
+    }
     function timer() {
         countdown--;
         $('#timer').text(countdown);
         if (countdown === 0) {
             stop();
-        }       
+        }
     }
-    $('#startBtn').on('click', function() {
-        intervalId = setInterval(timer, 1000);   
-            $('#timer').text(countdown);          
+    $('#startBtn').on('click', function () {
+        intervalId = setInterval(timer, 1000);
+        $('#timer').text(countdown);
     });
+
+   
     
     $(".submit").click(function () {
         $('form input:checked').each(function () {
@@ -48,10 +50,12 @@ $(document).ready(function () {
             if (correctAnswers[i] === playerAnswer[i]) {
                 correct++;
                 $('#answersRight').text(correct);
+                
             }
             else {
                 incorrect++;
                 $('#answersWrong').text(incorrect);
+                
             }
         }
     })
